@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Personal Project — Headphone Branding Design — Ajar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css"/>
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <div class="brand">
+      <img class="avatar" src="../assets/profile-1080.jpg" alt="Ajar"/>
+      <div class="id"><h1 class="title" style="view-transition-name:title-personal-project-headphone-branding-design">Personal Project — Headphone Branding Design</h1><p class="kicker">Graphic Design</p></div>
+    </div>
+    <div class="actions">
+      <a href="../index.html" class="btn" data-vt>← Back</a>
+      <button id="themeBtn" class="btn">🌓</button>
+      <script>
+        const html = document.documentElement; const saved = localStorage.getItem('theme'); if (saved) html.setAttribute('data-theme', saved)
+        document.getElementById('themeBtn').onclick=()=>{ const n = html.getAttribute('data-theme')==='light'?'dark':'light'; setTheme(n) }
+      </script>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero" style="display:grid; grid-template-columns:1.2fr 1fr; gap:24px; margin:24px 0">
+    <div class="detail-hero" style="view-transition-name:thumb-personal-project-headphone-branding-design">
+      <div style="width:100%; height:100%; background:url('../assets/thumb-placeholder.jpg') center/cover no-repeat"></div>
+    </div>
+    <div class="detail-info">
+      <h2 class="detail-title">Personal Project — Headphone Branding Design</h2>
+      <div class="pills"><span class="pill badge">Graphic Design</span><span class="pill badge"></span></div>
+      <p class="kicker">Role</p><p>Creative Direction, Motion Design, 3D</p>
+      <p class="kicker">Deliverables</p><p>Opener bumper, social cutdowns, LED mapping</p>
+    </div>
+  </section>
+  <section class="detail-body" style="background:var(--panel); border:1px solid var(--line); border-radius:16px; padding:16px">
+    <h3>Overview</h3><p>Placeholder overview.</p>
+  </section>
+</main>
+
+<script src="../common.js"></script>
+</body></html>

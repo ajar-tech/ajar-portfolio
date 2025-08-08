@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="id" data-theme="dark">
+<head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ajar — Aurora v6</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <div class="brand">
+      <img class="avatar" src="assets/profile-1080.jpg" alt="Ajar"/>
+      <div class="id"><h1>Ajar Adiwignyo</h1><p>Motion • 3D • Graphic Design</p></div>
+    </div>
+    <div class="actions">
+      <input id="search" class="search" placeholder="Cari project… (⌘/Ctrl+K)"/>
+      <button id="themeBtn" class="btn" title="Toggle tema">🌓</button>
+      <script>
+        const html = document.documentElement
+        const saved = localStorage.getItem('theme'); if (saved) html.setAttribute('data-theme', saved)
+        document.getElementById('themeBtn').onclick=()=>{ const n = html.getAttribute('data-theme')==='light'?'dark':'light'; setTheme(n) }
+      </script>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+  <div class="filters">
+    <button class="chip active" data-filter="All">All</button>
+    <button class="chip" data-filter="Motion/3D">Motion/3D</button>
+    <button class="chip" data-filter="Graphic Design">Graphic</button>
+  </div>
+  <div id="grid" class="grid"></div>
+</main>
+
+<footer class="container" style="color:var(--muted); padding:12px 0 40px">
+  <small>Aurora v6 — tilt, ripple, glow, reveal, transitions.</small>
+</footer>
+
+<script src="app.js"></script>
+<script src="common.js"></script>
+</body></html>
